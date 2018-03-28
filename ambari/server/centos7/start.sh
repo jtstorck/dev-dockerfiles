@@ -40,7 +40,7 @@ while [[ $# -ge 1 ]]; do
   shift
 done
 
-echo "KDC_HOST: $KDC_HOST"
+echo "KDC_HOST:  $KDC_HOST"
 echo "REALM:     $REALM"
 echo "DOMAIN:    $DOMAIN"
 
