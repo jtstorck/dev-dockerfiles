@@ -1,6 +1,6 @@
 #!/bin/bash
 
-service postgresql start
+systemctl start postgresql
 
 sudo -u postgres psql postgres -c "alter user postgres with password 'postpass'"
 

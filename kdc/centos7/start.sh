@@ -55,15 +55,15 @@ echo "$PASSWORD" > passwd
 echo "$PASSWORD" >> passwd
 kdb5_util create -s < passwd
 
-service krb5kdc start
-service kadmin start
+systemctl start krb5kdc
+systemctl start kadmin
 
 kadmin.local -q "addprinc admin/admin" < passwd
 rm -f passwd
 
 echo "*/admin@$REALM     *" > /var/kerberos/krb5kdc/kadm5.acl
 
-service krb5kdc restart
-service kadmin restart
+systemctl restart krb5kdc
+systemctl restart kadmin
 
 tail -f -n+1 /var/log/k*.log

@@ -15,7 +15,6 @@ run yum install -y ambari-server
 
 add setup.sh /root/
 run chmod +x /root/setup.sh
-run /root/setup.sh $ambari_user
 
 add start.sh /root/start.sh
 run chmod +x /root/start.sh

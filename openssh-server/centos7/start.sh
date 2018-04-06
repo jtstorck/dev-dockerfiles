@@ -14,5 +14,5 @@ else
   echo "$1" >> /root/.ssh/authorized_keys
 fi
 
-service sshd start
+systemctl start sshd
 tail -f /var/log/secure
