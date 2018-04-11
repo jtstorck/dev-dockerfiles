@@ -1,4 +1,4 @@
-from centos:7
+from centos/systemd
 
 arg repo=http://public-repo-1.hortonworks.com/ambari/centos7/2.x/updates/2.2.2.0/ambari.repo
 arg ambari_user=root
@@ -15,6 +15,7 @@ run yum install -y ambari-server
 
 add setup.sh /root/
 run chmod +x /root/setup.sh
+run /root/setup.sh $ambari_user
 
 add start.sh /root/start.sh
 run chmod +x /root/start.sh

@@ -1,4 +1,4 @@
-from centos:7
+from centos/systemd
 run yum update -y
 run yum install -y openssh-server openssh-clients syslog
 

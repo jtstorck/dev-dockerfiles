@@ -1,4 +1,4 @@
-from centos:7
+from centos/systemd
 run yum update -y
 run yum install -y krb5-server krb5-libs krb5-auth-dialog krb5-workstation
 
