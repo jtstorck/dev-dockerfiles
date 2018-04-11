@@ -1,5 +1,7 @@
 #!/bin/bash
 
+systemctl enable postgres
+
 if [ "$1" == "root" ]; then
   ambari-server setup -s
 else
