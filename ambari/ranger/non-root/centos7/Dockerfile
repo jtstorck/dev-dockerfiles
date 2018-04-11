@@ -6,6 +6,7 @@ run echo "net.ipv6.conf.default.disable_ipv6=1" >> /etc/sysctl.conf
 run echo "net.ipv6.conf.all.disable_ipv6=1" >> /etc/sysctl.conf
 run sed -i 's/^#ListenAddress 0.0.0.0/ListenAddress 0.0.0.0/g' /etc/ssh/sshd_config
 
+run systemctl enable postgresql initdb
 run systemctl start postgresql initdb
 
 run echo "host all all 0.0.0.0/0 md5" >> /var/lib/pgsql/data/pg_hba.conf

@@ -55,6 +55,8 @@ echo "$PASSWORD" > passwd
 echo "$PASSWORD" >> passwd
 kdb5_util create -s < passwd
 
+systemctl enable krb5kdc
+systemctl enable kadmin
 systemctl start krb5kdc
 systemctl start kadmin
 
